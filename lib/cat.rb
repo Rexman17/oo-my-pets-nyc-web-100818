@@ -1,10 +1,14 @@
 class Cat
-  # make this an attr reader so that a cat instance cannot change its name
+  # made :name it an attr_reader bc a Cat can't change its name
   attr_reader :name
-  attr_accessor :mood
+  # made :mood an attr_accessor bc the spec says a Cat CAN change its mood
+  attr_accessor :mood, :owner
 
-  def initialize(name) # Cat class can initialize a cat instance with a name
+  def initialize(name)
     @name = name
-    @mood = "nervous"
+    @mood = "nervous" # initializes w a nervous mood
   end
-end
+
+
+
+end # end of Cat class
